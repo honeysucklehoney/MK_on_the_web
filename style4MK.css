@@ -15,7 +15,65 @@ html{
 
 }
 
+pre{
 
+font-size: 11px;
+line-height: 0.7;
+font-style:normal;
+font-family: helvetica;
+text-decoration: none;
+color: black;
+margin-left: 16em;
+margin-right: 16em;
+margin-top: 0px;
+
+}
+
+a{
+
+text-decoration: none;
+
+}
+
+table {
+
+width: 100%;
+height: auto;
+padding: 0px;
+margin: 0px;
+border-collapse: collapse;
+}
+
+td {
+padding: 0;
+margin: 0;
+border-collapse: collapse;
+font-weight: bold;
+
+}
+
+.welcome_image{
+width: 90%;
+
+
+}
+
+.blink {
+    -webkit-animation: blink 1s step-end infinite;
+            animation: blink 1s step-end infinite;
+}
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+        @keyframes blink { 50% { visibility: hidden; }}
+
+
+
+
+.framed {
+
+  padding-left: 2%;
+  padding-right: 2%;
+
+}
 
 #welcome_drawing img {
 width:40%;
@@ -49,30 +107,118 @@ opacity: 40%;
 .grid {
 
   display: grid;
-  grid-template-columns: auto auto auto;
+  position: absolute;
+  z-index: +1;
+  grid-template-columns: auto auto;
+  width: 15%;
+
 
 }
 
-.column_projects  {
+
+.column_bio img{
+
+  width: 80%;
+  padding: 0;
+  margin: 0;
+
+
+}
+
+.column_bio  {
   flex: 50%;
-  margin-top: 20px;
+
+}
+
+.grid_large {
+
+  display: flex;
+  grid-template-columns: auto auto;
+  padding-left: 20%;
+
+
+}
+
+
+.projects {
+
+  width: 40%;
+  padding-left: 50%;
+
+}
+
+.projects td {
+padding: 0;
+margin: 0;
+
+
+}
+
+.list {
+
+
+  position: absolute;
+  z-index: -2;
+  grid-template-columns: auto auto;
+  padding-left: 25%;
+  font-family: helvetica;
+  font-weight: lighter;
+  font-size: 16px;
+
+
+
+}
+
+
+/* .column_projects  {
+  flex: 50%;
 
 }
 
 .column_projects img  {
 
-width: 80%;
+  width: 80%;
+  padding: 0;
+  margin: 0;
+
+  ] */
+
+/* width: 80%;
 margin-right: 10%;
 margin-left: 10%;
 margin-top: 10px;
+padding: 10px; */
+
+
+
+/* .column_projects:hover #hover_photo {
+
+visibility: visible;
+
+} */
+
+/* .portait {
+
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
 
 }
 
-.column_projects:hover {
+.portait img {
 
-background-color: blue;
+width: 80%; */
 
+}
 
+#hover_photo {
+
+position: absolute;
+background-image: url("Web drawings/doodles.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+opacity: 50%;
+visibility: hidden;
 }
 
 .gohome {
@@ -80,6 +226,9 @@ background-color: blue;
   margin-left: 30%;
   margin-right: 30%;
   margin-bottom: 0px;
+  /* border-style: dashed;
+  border-width: 3px;
+  border-color: black; */
 }
 
 @media (max-width: 700px) {
